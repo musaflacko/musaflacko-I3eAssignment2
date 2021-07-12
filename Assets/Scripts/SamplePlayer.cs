@@ -124,6 +124,7 @@ public class SamplePlayer : MonoBehaviour
             newPos += movementVector;
 
             transform.position = newPos;
+
             return true;
         }
         else
