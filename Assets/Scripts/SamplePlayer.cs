@@ -138,14 +138,25 @@ public class SamplePlayer : MonoBehaviour
     {
         Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.position + playerCamera.transform.forward * interactionDistance);
 
-        //int layermask = 1 << LayerMask.NameToLayer("Interactable");
+        int door = 1 << LayerMask.NameToLayer("Door");
+
+        int keydoor = 1 << LayerMask.NameToLayer("Keydoor");
+
 
         RaycastHit hitinfo;
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance))
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, door))
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
                 hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();
+            }
+        }
+
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, keydoor))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitinfo.transform.GetComponent<KeyDoor>().Gone();
             }
         }
 
