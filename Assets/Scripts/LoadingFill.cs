@@ -8,23 +8,32 @@ public class LoadingFill : MonoBehaviour
 
     public Slider slider;
     // Start is called before the first frame update
-    
-    
-    public void SetLoad(int load)
-    {
-        slider.value = load;
-    }
-
-
-    
+    [SerializeField]
+    private int Progress;
+    public GameObject loadingScreen;
+        
     void Start()
     {
-        
+        slider.value = Progress;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        loader();
+    }
+
+    private void loader()
+    {
+        if (slider.value != 100)
+        {
+            slider.value += 50 * Time.deltaTime ;
+
+        }
+        else
+        {
+            loadingScreen.SetActive(false);
+        }
+
     }
 }
