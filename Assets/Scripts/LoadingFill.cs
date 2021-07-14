@@ -14,6 +14,7 @@ public class LoadingFill : MonoBehaviour
         
     void Start()
     {
+        loadingScreen.SetActive(true);
         slider.value = Progress;
     }
 
@@ -33,6 +34,7 @@ public class LoadingFill : MonoBehaviour
         else
         {
             loadingScreen.SetActive(false);
+            slider.value = 0;
         }
 
     }

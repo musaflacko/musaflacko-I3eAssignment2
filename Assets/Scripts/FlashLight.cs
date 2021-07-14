@@ -8,7 +8,7 @@ public class FlashLight : MonoBehaviour
     public GameObject flashLight;
     public AudioSource clickOn;
     public AudioSource clickOff;
-    public bool isOn = false;
+    public bool isOn;
 
     // Start is called before the first frame update
     void Start()
