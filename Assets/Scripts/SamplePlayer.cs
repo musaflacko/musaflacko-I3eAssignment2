@@ -161,6 +161,7 @@ public class SamplePlayer : MonoBehaviour
             {
                 hitinfo.transform.GetComponent<KeyDoor>().Gone();
             }
+
         }
 
     }
