@@ -24,6 +24,8 @@ public class SamplePlayer : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
+    public AudioSource Footstep;
+
     /// <summary>
     /// The camera attached to the player model.
     /// Should be dragged in from Inspector.
@@ -75,6 +77,7 @@ public class SamplePlayer : MonoBehaviour
             if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
                 nextState = "Moving";
+                Footstep.Play();
             }
             yield return null;
         }
@@ -87,6 +90,7 @@ public class SamplePlayer : MonoBehaviour
             if (!CheckMovement())
             {
                 nextState = "Idle";
+                Footstep.Stop();
             }
             yield return null;
         }
@@ -122,8 +126,8 @@ public class SamplePlayer : MonoBehaviour
         {
             movementVector *= moveSpeed * Time.deltaTime;
             newPos += movementVector;
-
             transform.position = newPos;
+
             return true;
         }
         else
@@ -157,6 +161,7 @@ public class SamplePlayer : MonoBehaviour
             {
                 hitinfo.transform.GetComponent<KeyDoor>().Gone();
             }
+
         }
 
     }

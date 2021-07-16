@@ -5,20 +5,20 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject key;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool hasRedKey = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        gameObject.SetActive(false);
-    }
+    [SerializeField]
+    private bool lockDoor = false;
+    
+    [SerializeField]
+    private bool doorKey = false;
+
+
+
+
+
+
+
 }

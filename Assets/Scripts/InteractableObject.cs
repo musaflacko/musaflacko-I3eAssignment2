@@ -8,6 +8,8 @@ public class InteractableObject : MonoBehaviour
 
     private bool doorOpen = false;
 
+    public AudioSource openDoor;
+    public AudioSource closeDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +33,13 @@ public class InteractableObject : MonoBehaviour
         if (!doorOpen)
         {
             doorAnim.Play("Door_Open", 0, 0.0f);
+            openDoor.Play();
             doorOpen = true;
         }
         else
         {
             doorAnim.Play("Door_Close", 0, 0.0f);
+            closeDoor.Play();
             doorOpen = false;
         }
     }
