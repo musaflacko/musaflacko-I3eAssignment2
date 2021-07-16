@@ -5,30 +5,37 @@ using UnityEngine.UI;
 public class ScoringSystem : MonoBehaviour
 {
     [SerializeField]
-    public GameObject scoreText1;
+    public GameObject scoreText;
+
+    [SerializeField]
     public GameObject scoreText2;
 
     [SerializeField]
-    public int theScore;
-    public AudioSource collectSound;
+    public GameObject Quest2;
 
-    private void OnTriggerEnter(Collider other)
+    [SerializeField]
+    public static int theScore;
+
+    private void Update()
     {
-        //collectSound.Play();
-        theScore += 1;
-        scoreText1.GetComponent<Text>().text = "Coins: " + theScore + "/5";
-        collectSound.Play();
-        Destroy(gameObject);
         checkScore();
     }
 
-
-    public void checkScore()
+    private void checkScore()
     {
-        if (theScore == 5)
+        if(theScore != 5)
         {
-            scoreText1.SetActive(false);
-            scoreText2.SetActive(true);
+            scoreText.GetComponent<Text>().text = "Coins: " + theScore + "/5";
         }
+        else
+        {
+            scoreText.SetActive(false);
+            theScore = 0;
+            scoreText2.SetActive(true);
+            gameObject.SetActive(false);
+            Quest2.SetActive(true);
+
+        }
+
     }
 }
