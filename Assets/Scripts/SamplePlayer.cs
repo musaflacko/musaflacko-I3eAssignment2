@@ -145,6 +145,8 @@ public class SamplePlayer : MonoBehaviour
 
         int keydoor = 1 << LayerMask.NameToLayer("Keydoor");
 
+        int flashlight = 1 << LayerMask.NameToLayer("Flashlight");
+
 
         RaycastHit hitinfo;
         if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, door))
@@ -162,6 +164,14 @@ public class SamplePlayer : MonoBehaviour
                 hitinfo.transform.GetComponent<KeyDoor>().Gone();
             }
 
+        }
+
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, flashlight))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitinfo.transform.GetComponent<PickUpLight>().Activate();
+            }
         }
 
     }
