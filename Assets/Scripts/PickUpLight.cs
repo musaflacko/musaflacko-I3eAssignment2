@@ -6,6 +6,7 @@ public class PickUpLight : MonoBehaviour
 {
 
     public GameObject Light;
+    public AudioSource flashlight;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class PickUpLight : MonoBehaviour
     public void Activate()
     {
         Light.SetActive(true);
+        flashlight.Play();
         gameObject.SetActive(false);
     }
 }
