@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Loading Fill
+Description of Class: It is the typical loading bar
+Date Created: 15/07/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
