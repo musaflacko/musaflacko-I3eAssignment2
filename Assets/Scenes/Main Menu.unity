@@ -2645,7 +2645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HORROR GAME
+  m_Text: The Escape
 --- !u!222 &996140301
 CanvasRenderer:
   m_ObjectHideFlags: 0
