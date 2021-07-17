@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Musa
+Name of Class: Interactable Object
+Description of Class: To make sure that the doors in the game can be opened with its sound effect playing
+Date Created: 15/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

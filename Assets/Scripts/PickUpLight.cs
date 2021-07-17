@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Pick Up Light
+Description of Class: To pick up light and show that it is being interacted with
+Date Created: 17/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
