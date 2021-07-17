@@ -2982,31 +2982,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 261.84604
+      value: 255.11456
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9306089
+      value: 0.930609
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 134.7585
+      value: 117.792786
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071079
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3014,12 +3014,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5890720219120694129, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5890720219601928254, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ad6c36bf1dd4e541b02074a0fe73538, type: 2}
+    - target: {fileID: 5890720220294507520, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ad6c36bf1dd4e541b02074a0fe73538, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69a7138a2318a84581f6d975576cf97, type: 3}
 --- !u!1 &1315724593
@@ -3395,7 +3403,6 @@ GameObject:
   - component: {fileID: 1511311921}
   - component: {fileID: 1511311920}
   - component: {fileID: 1511311918}
-  - component: {fileID: 1511311919}
   m_Layer: 3
   m_Name: EscapeDoor
   m_TagString: Untagged
@@ -3416,21 +3423,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.93211514, y: 2.0309181, z: 0.09188652}
   m_Center: {x: 0.40227112, y: -0.1349783, z: 0.0040183067}
---- !u!114 &1511311919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511311917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ba0b506959ca54b9f42b31c829c4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
-  keyInventory: {fileID: 0}
 --- !u!95 &1511311920
 Animator:
   serializedVersion: 3
@@ -4161,7 +4153,6 @@ GameObject:
   - component: {fileID: 1746048655}
   - component: {fileID: 1746048654}
   - component: {fileID: 1746048653}
-  - component: {fileID: 1746048658}
   m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
@@ -4946,21 +4937,6 @@ Transform:
   m_Father: {fileID: 851272254}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1746048658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746048652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ba0b506959ca54b9f42b31c829c4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 0
-  redKey: 1
-  keyInventory: {fileID: 0}
 --- !u!1 &1780277074
 GameObject:
   m_ObjectHideFlags: 0

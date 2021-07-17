@@ -153,15 +153,6 @@ public class SamplePlayer : MonoBehaviour
             }
         }
 
-        /*if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, keydoor))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                hitinfo.transform.GetComponent<KeyDoor>().Gone();
-            }
-
-        }*/
-
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, flashlight))
         {
             if (Input.GetKeyDown(KeyCode.E))
