@@ -1,4 +1,9 @@
-﻿/*Developed and provided by SpeedTutor - www.speed-tutor.com*/
+﻿/******************************************************************************
+Author: Musa
+Name of Class: Splash Screen
+Description of Class: To create a fading custom splash screen before the game starts
+Date Created: 17/7/21
+******************************************************************************/
 
 using UnityEngine;
 using UnityEngine.UI;

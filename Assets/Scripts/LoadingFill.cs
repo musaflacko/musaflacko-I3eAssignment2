@@ -2,7 +2,7 @@
 Author: Wei Feng
 Name of Class: Loading Fill
 Description of Class: It is the typical loading bar
-Date Created: 15/07/21
+Date Created: 10/07/21
 ******************************************************************************/
 
 using System.Collections;

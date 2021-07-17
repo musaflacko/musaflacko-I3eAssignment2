@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Teleport Player
+Description of Class: To bring the player from different places back and forth 
+Date Created: 10/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

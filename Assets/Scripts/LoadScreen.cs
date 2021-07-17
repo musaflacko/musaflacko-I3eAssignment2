@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Loading Screen
+Description of Class: To load the game smoothly into the next scene
+Date Created: 10/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

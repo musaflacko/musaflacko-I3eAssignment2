@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Audio Trigger
+Description of Class: To play a sound when triggered to create a scary effect 
+Date Created: 16/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

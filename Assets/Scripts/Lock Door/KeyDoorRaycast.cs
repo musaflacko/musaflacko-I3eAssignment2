@@ -1,16 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonDoorRaycast : MonoBehaviour
+public class KeyDoorRaycast : MonoBehaviour
 {
-    [Header("Raycast Parameters")]
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string exludeLayerName = null;
 
-    private ButtonDoorController raycasted_obj;
+    private KeyItemController raycastedObject;
+    //[SerializeField] private KeyItemController keyController = null;
 
-    [Header("Key Codes")]
     [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
 
     [Header("UI Parameters")]
@@ -18,7 +19,7 @@ public class ButtonDoorRaycast : MonoBehaviour
     private bool isCrosshairActive;
     private bool doOnce;
 
-    private const string interactableTag = "DoorButton";
+    private const string interactableTag = "InteractiveObject";
 
     private void Update()
     {
@@ -33,7 +34,7 @@ public class ButtonDoorRaycast : MonoBehaviour
              {
                 if (!doOnce)
                 {
-                    raycasted_obj = hit.collider.gameObject.GetComponent<ButtonDoorController>();
+                    raycastedObject = hit.collider.gameObject.GetComponent<KeyItemController>();
                     CrosshairChange(true);
                 }
 
@@ -42,7 +43,7 @@ public class ButtonDoorRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
-                   raycasted_obj.PlayAnimation();
+                    raycastedObject.ObjectInteraction();
                 }
              }
         }

@@ -1,3 +1,10 @@
+/******************************************************************************
+Author: Musa & Wei Feng
+Name of Class: Scoring System 
+Description of Class: To keep track of the score system when the game is played
+Date Created: 11/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

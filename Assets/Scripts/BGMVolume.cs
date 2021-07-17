@@ -1,3 +1,11 @@
+/******************************************************************************
+Author: Wei Feng
+Name of Class: Background Music Volume
+Description of Class: To be able have a background music during gameplay as well
+                    as being able to adjust them.
+Date Created: 15/7/21
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

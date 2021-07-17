@@ -1,7 +1,11 @@
 /******************************************************************************
 Author: Elyas Chua-Aziz
+
 Name of Class: DemoPlayer
-Description of Class: This class will control the movement and actions of a player avatar based on user input.
+
+Description of Class: This class will control the movement and actions of a 
+                        player avatar based on user input.
+
 Date Created: 09/06/2021
 ******************************************************************************/
 
@@ -139,7 +143,7 @@ public class SamplePlayer : MonoBehaviour
 
         int door = 1 << LayerMask.NameToLayer("Door");
 
-        //int keydoor = 1 << LayerMask.NameToLayer("Keydoor");
+        int keydoor = 1 << LayerMask.NameToLayer("Keydoor");
 
         int flashlight = 1 << LayerMask.NameToLayer("Flashlight");
 
@@ -153,14 +157,6 @@ public class SamplePlayer : MonoBehaviour
             }
         }
 
-        /*if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, keydoor))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                hitinfo.transform.GetComponent<KeyDoor>().Gone();
-            }
-
-        }*/
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, flashlight))
         {
