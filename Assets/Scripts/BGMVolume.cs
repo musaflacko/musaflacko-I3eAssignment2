@@ -19,7 +19,6 @@ public class BGMVolume : MonoBehaviour
     void Update()
     {
         BGM.volume = slider.value;
-
     }
 
     public void textUpdate (float value)
