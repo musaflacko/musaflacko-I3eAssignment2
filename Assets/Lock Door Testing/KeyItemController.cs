@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class KeyItemController : MonoBehaviour
 {
-    [Header("Object Type")]
     [SerializeField] private bool redDoor = false;
     [SerializeField] private bool redKey = false;
 
-    [Header("Inventory")]
     [SerializeField] private KeyDoorInventory keyInventory = null;
 
     private KeyDoorController doorObject;

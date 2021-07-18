@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class KeyDoorRaycast : MonoBehaviour
 {
-    [Header("Raycast Parameters")]
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string exludeLayerName = null;
@@ -11,10 +10,8 @@ public class KeyDoorRaycast : MonoBehaviour
     private KeyItemController raycastedObject;
     //[SerializeField] private KeyItemController keyController = null;
 
-    [Header("Key Codes")]
     [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
 
-    [Header("UI Parameters")]
     [SerializeField] private Image crosshair = null;
     private bool isCrosshairActive;
     private bool doOnce;
