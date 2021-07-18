@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - flashLight: {instanceID: 0}
+  - flashLight: {fileID: 7602382140808656198, guid: 9d3b6a4ecfa8df2408a97b4b7ff14057, type: 3}
   - clickOn: {instanceID: 0}
   - clickOff: {instanceID: 0}
   executionOrder: 0
