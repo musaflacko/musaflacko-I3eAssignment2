@@ -149,6 +149,14 @@ public class SamplePlayer : MonoBehaviour
 
         RaycastHit hitinfo;
 
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, door))
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();
+            }
+        }
+
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, keydoor))
         {
             if (Input.GetKeyDown(KeyCode.E))
