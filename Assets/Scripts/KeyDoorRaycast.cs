@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class KeyDoorRaycast : MonoBehaviour
 {
+    [Header("Raycast Parameters")]
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string exludeLayerName = null;
@@ -10,15 +11,17 @@ public class KeyDoorRaycast : MonoBehaviour
     private KeyItemController raycastedObject;
     //[SerializeField] private KeyItemController keyController = null;
 
-    [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
+    [Header("Key Codes")]
+    [SerializeField] private KeyCode openDoorKey = KeyCode.E;
 
+    [Header("UI Parameters")]
     [SerializeField] private Image crosshair = null;
     private bool isCrosshairActive;
     private bool doOnce;
 
     private const string interactableTag = "InteractiveObject";
 
-    private void Update()
+    public void Update()
     {
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -32,7 +35,6 @@ public class KeyDoorRaycast : MonoBehaviour
                 if (!doOnce)
                 {
                     raycastedObject = hit.collider.gameObject.GetComponent<KeyItemController>();
-                    CrosshairChange(true);
                 }
 
                 isCrosshairActive = true;
@@ -49,7 +51,6 @@ public class KeyDoorRaycast : MonoBehaviour
         {
             if (isCrosshairActive)
             {
-                CrosshairChange(false);
                 doOnce = false;
             }
         }

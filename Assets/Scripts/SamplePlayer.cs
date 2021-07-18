@@ -147,16 +147,15 @@ public class SamplePlayer : MonoBehaviour
 
         int flashlight = 1 << LayerMask.NameToLayer("Flashlight");
 
-
         RaycastHit hitinfo;
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, door))
+
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, keydoor))
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();
+                hitinfo.transform.GetComponent<KeyItemController>().ObjectInteraction();
             }
         }
-
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, flashlight))
         {
